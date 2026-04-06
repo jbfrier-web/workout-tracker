@@ -425,7 +425,17 @@ const DEFAULT_PROGRAM = {
       id:'lower', name:'Lower Body', emoji:'🦵',
       description:'Quads, glutes & hamstrings — Wed',
       locked:false,
-      sections:[{
+      sections:[
+        {
+          id:'lower_warmup', name:'Warmup', type:'checklist',
+          items:[
+            {id:'march',name:'Marching in Place',rx:'3 min'},
+            {id:'hip_circle',name:'Hip Circles',rx:'10 / side'},
+            {id:'bw_squat',name:'Bodyweight Squat',rx:'10 reps',note:'Slow — feel the range before adding weight'},
+            {id:'lower_hip_flexor',name:'Hip Flexor Stretch',rx:'5 / side',note:'From mobility routine'},
+          ]
+        },
+        {
         id:'lower_body', name:'Lower Body', type:'exercises',
         items:[
           {id:'goblet_squat',name:'Goblet Squat',rx:'3×10',sets:3,target:10,startWeight:15,note:'DB at chest, sit into it — great for L5'},
@@ -441,7 +451,17 @@ const DEFAULT_PROGRAM = {
       id:'full', name:'Full Body', emoji:'⚡',
       description:'Push, pull & legs — Fri',
       locked:false,
-      sections:[{
+      sections:[
+        {
+          id:'full_warmup', name:'Warmup', type:'checklist',
+          items:[
+            {id:'march_full',name:'Marching in Place',rx:'3 min'},
+            {id:'arm_circle',name:'Arm Circles',rx:'10 fwd, 10 back'},
+            {id:'band_pull',name:'Band Pull-Apart',rx:'15 reps',note:'Light band — primes the shoulder'},
+            {id:'bw_lunge',name:'Bodyweight Reverse Lunge',rx:'5 / side',note:'Slow — prep the hips before loading'},
+          ]
+        },
+        {
         id:'full_body', name:'Full Body', type:'exercises',
         items:[
           {id:'incline_press',name:'DB Incline Press',rx:'3×10',sets:3,target:10,startWeight:15,note:'Bench at 45° incline'},
